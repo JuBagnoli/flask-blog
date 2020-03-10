@@ -1,6 +1,14 @@
-#import Flask class from the flask module
+from os import getenv
+
+getenv('SECRET_KEY')
+getenv('DATABASE_URI')
+
 from flask import Flask
-#create a new instance of Flask and store it in app
+from flask_sqlalchemy import SQLAlchemy
+import os
 app = Flask(__name__)
-#import the ./application/routes.py file
+app.config['SQLALCHEMY_DATABASE_URI']=getenv('DATABASE_URI')
+db=SQLAlchemy(app)
+app.config['SECRET_KEY'] = getenv('SECRET_KEY')
+db = SQLAlchemy(app)
 from application import routes

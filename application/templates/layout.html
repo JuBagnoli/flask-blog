@@ -3,9 +3,12 @@
 <title{{ title }}</title></title>
 </head>
 <body>
-    <a href="{{ url_for('home') }}">Login</a>
-    <a href="{{ url_for('home') }}">register</a>
-{% block body_content %}
+    <a href="{{ url_for('login') }}">Log in</a>
+    <a href="{{ url_for('register') }}">Register now</a>
+    <a href="{{ url_for('home') }}">Kitten Blog</a>
+    <a href="{{ url_for('about') }}">Your kitten</a>
+    <a href="{{ url_for('post') }}">Kitten Smitten posts!</a>
+    {% block body_content %}
 {% endblock body_content %}
 </body>
 </html>
