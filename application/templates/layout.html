@@ -4,15 +4,16 @@
     </head>
 
     {% if current_user.is_authenticated %}
-    <a href="{{ url_for('post') }}">Smitten posts!</a>
-    <a href="{{ url_for('home') }}">Kitten Blog</a>
-    <a href="{{ url_for('about') }}">Your kitten</a>
+    <a href="{{ url_for('post') }}">Blog posts!</a>
+    <a href="{{ url_for('home') }}">Blogs</a>
+    <a href="{{ url_for('account') }}">Your account</a> 
+    <a href="{{ url_for('about') }}">Your post</a>
     <a href="{{ url_for('logout') }}">logout</a> 
     {% else %}
     <a href="{{ url_for('login') }}">Log in</a>
     <a href="{{ url_for('register') }}">Register</a>
     <a href="{{ url_for('logout') }}">logout</a> 
-    <a href="{{ url_for('about') }}">Your kitten</a>
+    <a href="{{ url_for('about') }}">Your post</a>
     </div>
     {% endif %}
     {% block body_content %}
